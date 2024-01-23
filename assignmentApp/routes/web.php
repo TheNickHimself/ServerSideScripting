@@ -20,5 +20,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/manufacturers', [ManufacturerController::class, 'index'])->name('manufacturers.index');;
-Route::get('/cars', [CarController::class, 'index'])->name('cars.index');;
+
+Route::get('/cars', [CarController::class, 'index'])->name('cars.index');
+Route::get('/cars/create', [ManufacturerController::class, 'create'])->name('cars.create');
+Route::get('/cars/{id}', [ContactController::class, 'show'])->name('cars.show');

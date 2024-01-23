@@ -17,8 +17,7 @@
     </head>
     <body class="antialiased">
         <a href="{{ route('cars.index') }}">Cars</a>
-        <a href="{{ route('manufacturers.index') }}">Manufacturers</a>
-    </body>
-        </div>
+        <a href="{{ route('cars.create') }}">Add Car</a>
+        <a href="{{ route('cars.show') }}">Show Cars</a>
     </body>
 </html>
