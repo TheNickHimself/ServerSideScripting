@@ -40,7 +40,36 @@ class CarController extends Controller
 
     public function show($id)
     {
-        $cars = Car::find($id);
-        return view('cars.show', compact('cars'));
+        $car = Car::find($id);
+        return view('cars.show', compact('car'));
+    }
+
+    public function edit($id)
+    {
+        $car = Car::find($id);
+        $makes = Manufacturer::all();
+        return view('cars.edit', compact('makes', 'car'));
+    }
+    
+    public function destroy ($id)
+    {
+        $car = Car::find($id);
+        $car->delete();
+        return back()->with('message', 'Car has been removed from sale');
+    }
+
+    public function update($id, Request $request)
+    {
+        $request->validate([
+            'model' => 'required',
+            'year' => 'required',
+            'salesperson_email' => 'required|email',
+            'manufacturer_id' => 'required|exists:manufacturers,id'
+        ]);
+
+        $car = Car::find($id);
+        $car->update($request->all());
+
+        return redirect()->route('cars.index')->with('message', 'Car has been updated!');
     }
 }

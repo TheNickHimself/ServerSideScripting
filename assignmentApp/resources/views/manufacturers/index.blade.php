@@ -11,7 +11,6 @@
               <div class="d-flex align-items-center">
                 <h2 class="mb-0">All Manufacturers</h2>
                 <div class="ml-auto">
-                  <a href="{{ route('cars.create') }}" class="btn btn-success"><i class="fa fa-plus-circle"></i> Add Car</a>
                 </div>
               </div>
             </div>
@@ -34,10 +33,6 @@
                       <td>{{ $mano->name }}</td>
                       <td>{{ $mano->address }}</td>
                       <td>{{ $mano->phone }}</td>
-                      <td width="150">
-                        <a href="show.html" class="btn btn-sm btn-circle btn-outline-info" title="Show"><i class="fa fa-eye"></i></a>
-                        <a href="form.html" class="btn btn-sm btn-circle btn-outline-secondary" title="Edit"><i class="fa fa-edit"></i></a>
-                        <a href="#" class="btn btn-sm btn-circle btn-outline-danger" title="Delete" onclick="confirm('Are you sure?')"><i class="fa fa-times"></i></a>
                       </td>
                     </tr>
                   @endforeach
