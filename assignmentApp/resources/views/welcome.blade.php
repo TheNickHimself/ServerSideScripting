@@ -18,6 +18,6 @@
     <body class="antialiased">
         <a href="{{ route('cars.index') }}">Cars</a>
         <a href="{{ route('cars.create') }}">Add Car</a>
-        <a href="{{ route('cars.show') }}">Show Cars</a>
+        <a href="{{ route('cars.show', 1) }}">Show Cars</a>
     </body>
 </html>

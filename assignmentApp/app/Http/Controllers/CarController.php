@@ -3,21 +3,26 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Car;
+use App\Models\Manufacturer;
 
 class CarController extends Controller
 {
     public function index()
     {
-        return view('cars.index');
+        $cars = Car::all();
+        return view('cars.index', compact('cars'));
     }
     public function create()
     {
-        return view('cars.create');
+        
+        return view('cars.create', compact('cars'));
     }
 
     public function show($id)
     {
-        $car = Car::find($id);
-        return view('cars.show', compact('car'));
+        return view('cars.show');
+        //$cars = Car::find($id);
+        //return view('cars.show', compact('cars'));
     }
 }
