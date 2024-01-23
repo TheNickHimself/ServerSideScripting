@@ -19,5 +19,6 @@
         <a href="{{ route('cars.index') }}">Cars</a>
         <a href="{{ route('cars.create') }}">Add Car</a>
         <a href="{{ route('cars.show', 1) }}">Show Cars</a>
+        <a href="{{ route('manufacturers.index') }}">Show Manufacturers</a>
     </body>
 </html>

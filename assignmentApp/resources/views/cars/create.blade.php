@@ -15,12 +15,7 @@
                 <div class="form-group row">
                   <label for="car_model" class="col-md-3 col-form-label">Car Model</label>
                   <div class="col-md-9">
-                    <select id="cars" name="cars">
-                        <option value="volvo">Volvo</option>
-                        <option value="saab">Saab</option>
-                        <option value="fiat">Fiat</option>
-                        <option value="audi">Audi</option>
-                    </select>
+                    <input type="text" name="car_model" id="car_model" class="form-control">
                   </div>
                 </div>
 
@@ -38,7 +33,6 @@
                   </div>
                 </div>
                 <hr>
-
                 <div class="form-group row mb-0">
                   <div class="col-md-9 offset-md-3">
                       <button type="submit" class="btn btn-primary">Save</button>
