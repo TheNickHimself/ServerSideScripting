@@ -4,12 +4,11 @@
     <div class="row">
       <div class="col">
         <div class="input-group mb-3">
-          <select class="custom-select">
-            <option value="" selected>All Companies</option>
-            <option value="1">Company One</option>
-            <option value="2">Company Two</option>
-            <option value="3">Company Three</option>
-          </select>
+            <select id="fltr_make_id" name="manufacturer_id" class="custom-select">
+              @foreach ($makes as $id => $name)
+              <option {{ $id == request('manufacturer_id')? 'selected' : ''}} values="{{$id}}">{{ $name }}</option>
+              @endforeach
+            </select>
           </div>
         </div>
       </div>
